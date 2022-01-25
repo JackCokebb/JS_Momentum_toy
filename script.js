@@ -25,6 +25,9 @@ const player = {
   sayHello(name) {
     console.log("hello my name is JEE! " + name);
   },
+  sayBye: function (name) {
+    console.log("bye bye ! " + name + " see you again!");
+  },
 };
 console.log(player);
 //console.log(player["name"]);
@@ -34,3 +37,4 @@ player.height = 181;
 console.log(player);
 const hoho = "hoho";
 player.sayHello("hohe");
+player.sayBye("moran");
