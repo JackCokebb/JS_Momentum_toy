@@ -22,6 +22,9 @@ const player = {
   name: "JEE",
   age: 26,
   money: 300,
+  sayHello(name) {
+    console.log("hello my name is JEE! " + name);
+  },
 };
 console.log(player);
 //console.log(player["name"]);
@@ -29,3 +32,5 @@ player.money = 4000;
 //console.log(player.money);
 player.height = 181;
 console.log(player);
+const hoho = "hoho";
+player.sayHello("hohe");
