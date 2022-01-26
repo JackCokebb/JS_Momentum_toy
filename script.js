@@ -1,5 +1,12 @@
+let click_count = 0;
 function handleTitleClicked() {
   console.log("title was clicked!");
+  gott.style.color = "blue";
+  click_count++;
+  if (click_count > 5) {
+    gott.innerText = "STOP!";
+    gott.style.color = "red";
+  }
 }
 
 const hellos = document.getElementsByClassName("hello");
