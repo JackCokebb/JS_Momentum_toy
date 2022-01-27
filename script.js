@@ -18,6 +18,13 @@ function handleTitleLeft() {
   console.log("mouse left");
   got2.style.color = "black";
 }
+function handleWindowResize() {
+  console.log("window resized");
+  document.body.style.backgroundColor = "tomato";
+}
+function handleCopy() {
+  alert("copier!");
+}
 
 const hellos = document.getElementsByClassName("hello");
 //console.log(hellos);
@@ -29,5 +36,9 @@ console.dir(gott);
 gott.addEventListener("click", handleTitleClicked);
 
 const got2 = document.querySelector("h2");
-got2.addEventListener("mouseenter", handleTitleEntered);
+//got2.addEventListener("mouseenter", handleTitleEntered);
+got2.onmouseenter = handleTitleEntered;
 got2.addEventListener("mouseleave", handleTitleLeft);
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleCopy);
