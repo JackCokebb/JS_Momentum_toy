@@ -100,3 +100,17 @@ got2.addEventListener("mouseleave", handleTitleLeft);
 
 //window.addEventListener("resize", handleWindowResize);
 window.addEventListener("copy", handleCopy);
+/*---------------------------------------------------------------------*/
+function handleTitleClicked() {
+  const clickedClass = "active";
+  //if (gott.className === clickedClass) gott.className = "";
+  // if (gott.classList.contains(clickedClass))
+  //   gott.classList.remove(clickedClass);
+  // else gott.classList.add(clickedClass);
+  gott.classList.toggle(clickedClass);
+}
+
+const gott = document.querySelector("div.hello:first-child h1"); //css selector
+console.dir(gott);
+//gott.style.color = "blue";
+gott.addEventListener("click", handleTitleClicked);

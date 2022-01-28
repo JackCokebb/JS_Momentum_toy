@@ -1,6 +1,12 @@
-function handleTitleClicked() {}
+const loginForm = document.querySelector("#login-form");
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
 
-const gott = document.querySelector(".hello:first-child"); //css selector
-console.dir(gott);
-//gott.style.color = "blue";
-gott.addEventListener("click", handleTitleClicked);
+function handleLoginButtonClick() {
+  console.dir(loginInput);
+  console.log("login clicked");
+  const userName = loginInput.value;
+  console.log("hello! " + userName);
+}
+
+loginButton.addEventListener("click", handleLoginButtonClick);
