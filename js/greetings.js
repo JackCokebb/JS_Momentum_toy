@@ -11,18 +11,20 @@ function handleLoginSubmit(event) {
   localStorage.setItem(USERNAME_KEY, userName);
   loginForm.classList.add(HIDDEN_CLASSNAME);
   //greeting.innerText = "Hello " + userName;
+  paintGreetings(userName);
+}
+
+function paintGreetings(userName) {
   greeting.innerText = `Hello ${userName}!`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-loginForm.addEventListener("submit", handleLoginSubmit);
-
 const savedUserName = localStorage.getItem(USERNAME_KEY);
 if (savedUserName === null) {
-  //show the form
+  //show the login form
   loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", handleLoginSubmit);
 } else {
   //show the greeting
-  greeting.classList.remove(HIDDEN_CLASSNAME);
-  greeting.innerText = `Hello ${savedUserName}!`;
+  paintGreetings(savedUserName);
 }
