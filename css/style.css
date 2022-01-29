@@ -1,3 +1,10 @@
+* {
+  color: white;
+}
+body {
+  text-align: center; /* Quirks Mode 를 위한 가운데 정렬 */
+}
+
 .hidden {
   display: none;
 }
@@ -29,6 +36,11 @@ input::placeholder {
   background: none;
   color: white;
   box-sizing: border-box;
+}
+
+#todo-list {
+  color: white;
+  font-size: 20px;
 }
 
 #clock {
