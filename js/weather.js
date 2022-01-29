@@ -6,11 +6,11 @@ function onGeoOk(position) {
   fetch(weather_url)
     .then((response) => response.json())
     .then((data) => {
-      const cityContainer = document.querySelector("#weather span:first-child");
+      const cityContainer = document.querySelector("#weather span:last-child");
       const weatherContainer = document.querySelector(
-        "#weather span:last-child"
+        "#weather span:first-child"
       );
-      cityContainer.innerText = data.name;
+      cityContainer.innerText = `@${data.name}`;
       weatherContainer.innerText = `${data.weather[0].main} / ${data.main.temp}℃`;
     }); //promise func
 }

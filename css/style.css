@@ -2,6 +2,49 @@
   display: none;
 }
 
+input::placeholder {
+  color: white;
+  font-style: italic;
+  font-size: 16px;
+}
+
+#login-form input[type="text"] {
+  padding: 5px 10px;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+  background: none;
+  color: white;
+}
+
+#todo-form input[type="text"] {
+  width: 300px;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+  height: 30px;
+  padding: 20px 0px;
+  background: none;
+  color: white;
+  box-sizing: border-box;
+}
+
+#clock {
+  font-size: 100px;
+  color: white;
+  margin-bottom: 30px;
+}
+#quote {
+  color: white;
+  font-size: 20px;
+}
+#weather {
+  color: white;
+  font-size: 30px;
+}
+
 #bgImg {
   position: absolute;
   width: 100%;
